@@ -5,6 +5,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 import LightboxGallery from '@/components/LightboxGallery';
 
 // Import images
+import heroPortfolio from '@/assets/hero-portfolio.jpg';
 import heroWedding from '@/assets/hero-wedding.jpg';
 import galleryWedding1 from '@/assets/gallery-wedding-1.jpg';
 import galleryWedding2 from '@/assets/gallery-wedding-2.jpg';
@@ -49,16 +50,27 @@ const Portfolio = () => {
       : allImages.filter((img) => img.category === activeFilter);
 
   return (
-    <Layout>
+    <Layout navigationVariant="transparent">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-background">
-        <div className="container mx-auto px-6 md:px-12">
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroPortfolio}
+            alt="Photography gallery exhibition"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-hero-overlay" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-6 md:px-12">
           <div className="max-w-3xl">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="section-subtitle"
+              className="font-body text-xs uppercase tracking-ultra text-gold mb-4 block"
             >
               Our Work
             </motion.span>
@@ -66,22 +78,22 @@ const Portfolio = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-display text-5xl md:text-6xl lg:text-7xl font-light mb-6"
+              className="font-display text-5xl md:text-6xl lg:text-7xl font-light text-cream mb-6"
             >
               Portfolio
-              <span className="block italic text-gold">Gallery</span>
+              <span className="block italic text-gold-light">Gallery</span>
             </motion.h1>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="decorative-line-left mb-8"
+              className="w-16 h-px bg-gold mb-8"
             />
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="font-body text-lg text-muted-foreground leading-relaxed"
+              className="font-body text-lg text-cream/80 leading-relaxed max-w-xl"
             >
               Explore our collection of cherished moments. Each image tells a unique story of
               love, joy, and celebration.

@@ -15,6 +15,9 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
+// Import hero image
+import heroContact from '@/assets/hero-contact.jpg';
+
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -78,16 +81,27 @@ const Contact = () => {
   ];
 
   return (
-    <Layout>
+    <Layout navigationVariant="transparent">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-background">
-        <div className="container mx-auto px-6 md:px-12">
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroContact}
+            alt="Elegant photography studio consultation"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-hero-overlay" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-6 md:px-12">
           <div className="max-w-3xl">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="section-subtitle"
+              className="font-body text-xs uppercase tracking-ultra text-gold mb-4 block"
             >
               Get in Touch
             </motion.span>
@@ -95,22 +109,22 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-display text-5xl md:text-6xl lg:text-7xl font-light mb-6"
+              className="font-display text-5xl md:text-6xl lg:text-7xl font-light text-cream mb-6"
             >
               Let's Create
-              <span className="block italic text-gold">Together</span>
+              <span className="block italic text-gold-light">Together</span>
             </motion.h1>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="decorative-line-left mb-8"
+              className="w-16 h-px bg-gold mb-8"
             />
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="font-body text-lg text-muted-foreground leading-relaxed"
+              className="font-body text-lg text-cream/80 leading-relaxed max-w-xl"
             >
               Ready to capture your special moments? We'd love to hear from you. Fill out the
               form below or reach out directly.

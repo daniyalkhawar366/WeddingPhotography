@@ -5,6 +5,7 @@ import Layout from '@/components/Layout';
 import AnimatedSection from '@/components/AnimatedSection';
 
 // Import images
+import heroServices from '@/assets/hero-services.jpg';
 import heroWedding from '@/assets/hero-wedding.jpg';
 import galleryBirthday from '@/assets/gallery-birthday.jpg';
 import galleryCorporate from '@/assets/gallery-corporate.jpg';
@@ -91,16 +92,27 @@ const Services = () => {
   ];
 
   return (
-    <Layout>
+    <Layout navigationVariant="transparent">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-background">
-        <div className="container mx-auto px-6 md:px-12">
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroServices}
+            alt="Professional photography studio"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-hero-overlay" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-6 md:px-12">
           <div className="max-w-3xl">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="section-subtitle"
+              className="font-body text-xs uppercase tracking-ultra text-gold mb-4 block"
             >
               Our Services
             </motion.span>
@@ -108,22 +120,22 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-display text-5xl md:text-6xl lg:text-7xl font-light mb-6"
+              className="font-display text-5xl md:text-6xl lg:text-7xl font-light text-cream mb-6"
             >
               Capturing Your
-              <span className="block italic text-gold">Special Moments</span>
+              <span className="block italic text-gold-light">Special Moments</span>
             </motion.h1>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="decorative-line-left mb-8"
+              className="w-16 h-px bg-gold mb-8"
             />
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="font-body text-lg text-muted-foreground leading-relaxed"
+              className="font-body text-lg text-cream/80 leading-relaxed max-w-xl"
             >
               From intimate celebrations to grand events, we offer tailored photography and
               videography services designed to capture your most precious moments beautifully.

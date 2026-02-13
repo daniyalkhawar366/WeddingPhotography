@@ -98,7 +98,7 @@ Event photography is high-stakes. Weddings can't be re-shot. Corporate galas hav
 
 Your **digital marketing for event photography** must communicate: *"You can trust me with your most important moments."*
 
-![](/src/assets/blog/blog1/1st.jpg)
+![](/blog/blog1/1st.jpg)
 
 ---
 
@@ -140,7 +140,7 @@ Google prioritizes comprehensive, valuable content. Your **photography SEO** str
 
 **Educational resources:** Blog posts answering common client questions generate organic traffic and demonstrate expertise. Each post should target specific long-tail keywords.
 
-![](/src/assets/blog/blog1/2nd.webp)
+![](/blog/blog1/2nd.webp)
 
 ---
 
@@ -182,7 +182,7 @@ Create content specifically targeting your geographic market:
 
 **Local vendor collaborations:** Feature local venues, florists, and planners on your blog. Link to their websites. These relationships often lead to backlinks—one of Google's top ranking factors.
 
-![](/src/assets/blog/blog1/3rd.webp)
+![](/blog/blog1/3rd.webp)
 
 ---
 
@@ -208,7 +208,7 @@ Create content specifically targeting your geographic market:
 
 **Limited availability updates:** "Only 3 wedding dates remaining for 2025." This creates urgency and signals demand.
 
-![](/src/assets/blog/blog1/4th.png)
+![](/blog/blog1/4th.png)
 
 ---
 
@@ -242,7 +242,7 @@ Create content specifically targeting your geographic market:
 
 Your past clients are your most valuable email asset. Send anniversary emails featuring their event photos. This delights past clients and generates repeat bookings for milestone events.
 
-![](/src/assets/blog/blog1/5th.png)
+![](/blog/blog1/5th.png)
 
 ---
 
@@ -550,7 +550,7 @@ Before diving into tactics, understand where the industry stands. **Social media
 
 **The discovery revolution:** 40% of Gen Z uses TikTok and Instagram as their primary search engines—not Google. If you're not optimizing for social search, you're invisible to the next generation of clients.
 
-![](/src/assets/blog/blog2/1st.webp)
+![](/blog/blog2/1st.webp)
 
 ---
 
@@ -580,7 +580,7 @@ The biggest mistake photographers make is spreading themselves across every plat
 
 **Our recommendation for 2025/26:** Master Instagram for immediate discovery, build Pinterest for evergreen traffic, and test TikTok strategically. But **start with one** until you see consistent engagement and inquiries.
 
-![](/src/assets/blog/blog2/2nd.jpg)
+![](/blog/blog2/2nd.jpg)
 
 ---
 
@@ -715,7 +715,7 @@ This formula maintains value delivery while building the emotional connection cl
 | Saturday | Portfolio | Recent session highlights |
 | Sunday | Community | Vendor collaboration or venue feature |
 
-![](/src/assets/blog/blog2/3rd.webp)
+![](/blog/blog2/3rd.webp)
 
 ---
 
@@ -798,7 +798,7 @@ Your content should consistently reinforce:
 
 [Learn more about our brand story here](/about)
 
-![](/src/assets/blog/blog2/4th.jpg)
+![](/blog/blog2/4th.jpg)
 
 ---
 
@@ -863,7 +863,7 @@ The photographers booking consistently aren't those with the largest followings.
 - Client spotlights and anniversary features
 - Local wedding and event Facebook groups
 
-![](/src/assets/blog/blog2/5h.png)
+![](/blog/blog2/5h.png)
 
 ---
 
@@ -915,7 +915,7 @@ When a Reel performs well organically, invest $20-50 to amplify it. If it resona
 **Pinterest:** Promoted pins for evergreen portfolio content
 **TikTok:** Spark Ads (boosting organic content)
 
-![](/src/assets/blog/blog2/6th.jpg)
+![](/blog/blog2/6th.jpg)
 
 ---
 
@@ -1070,7 +1070,7 @@ Google considers:
 - **Authority and trust**: Do other reputable sites link to yours?
 - **Local relevance**: Are you optimized for local searches?
 
-![](/src/assets/blog/blog3/1st.png)
+![](/blog/blog3/1st.png)
 
 ## Image SEO: Your Secret Weapon
 
@@ -1097,7 +1097,7 @@ Large image files slow down your website, which hurts your **photographer Google
 - Implement responsive images with srcset attributes
 - Consider using a CDN for faster image delivery
 
-![](/src/assets/blog/blog3/2nd.webp)
+![](/blog/blog3/2nd.webp)
 
 ## On-Page SEO Essentials
 
@@ -1159,7 +1159,7 @@ NAP stands for Name, Address, Phone number. Ensure this information is identical
 - Online directories
 - Review platforms
 
-![](/src/assets/blog/blog3/3rd.webp)
+![](/blog/blog3/3rd.webp)
 
 ## Technical SEO for Photography Websites
 
@@ -1312,7 +1312,7 @@ Unlike paid advertising, which stops working when you stop paying, **content mar
 - Email sequences nurture leads automatically
 - Pinterest pins drive traffic for months
 
-![](/src/assets/blog/blog4/4th.jpg)
+![](/blog/blog4/4th.jpg)
 
 ## Building a Photography Blog Strategy
 
@@ -1346,7 +1346,7 @@ Position yourself as an authority:
 - Seasonal photography trend reports
 - Vendor collaboration guides
 
-![](/src/assets/blog/blog4/1st.webp)
+![](/blog/blog4/1st.webp)
 
 ### Blog Writing Best Practices
 
@@ -1386,7 +1386,7 @@ Best for YouTube and embedded on your blog:
 - Business advice for photographers
 - Annual review and goal-setting videos
 
-![](/src/assets/blog/blog4/2nd.webp)
+![](/blog/blog4/2nd.webp)
 
 ## Brand Storytelling for Photography Businesses
 
@@ -1442,7 +1442,7 @@ Create valuable free resources to capture email addresses:
 - Corporate event photography planning template
 - Birthday party decoration inspiration guide
 
-![](/src/assets/blog/blog4/3rd.jpeg)
+![](/blog/blog4/3rd.jpeg)
 
 ## Repurposing Content for Maximum Impact
 
@@ -1559,7 +1559,7 @@ While social media is essential for visibility, **photographer email campaigns**
 
 With social media algorithms constantly changing, your posts may reach only 5-10% of your followers. Email lands directly in your subscriber's inbox, giving you **direct, unfiltered access** to your audience.
 
-![](/src/assets/blog/blog5/1st.webp)
+![](/blog/blog5/1st.webp)
 
 ## Building Your Photography Email List
 
@@ -1593,7 +1593,7 @@ Place email signup opportunities across all touchpoints:
 - In-person at events (tablet signup or QR code)
 - On your [contact page](/contact) as an additional option
 
-![](/src/assets/blog/blog5/2nd.webp)
+![](/blog/blog5/2nd.webp)
 
 ## Crafting Effective Email Campaigns
 
@@ -1643,7 +1643,7 @@ Consistent **photography newsletter ideas** keep you top-of-mind with potential 
 **November**: Year in review + gratitude email
 **December**: Holiday greetings + next year booking incentives
 
-![](/src/assets/blog/blog5/3rd.webp)
+![](/blog/blog5/3rd.webp)
 
 ## Email Automation for Photographers
 
@@ -1692,7 +1692,7 @@ For subscribers who haven't opened emails in 90+ days:
 - Exclusive mini-session opportunities
 - Holiday cards with their favorite images
 
-![](/src/assets/blog/blog5/4th.avif)
+![](/blog/blog5/4th.avif)
 
 ## Email Design Best Practices for Photographers
 
@@ -1784,7 +1784,7 @@ Interested in working with a photography team that understands marketing excelle
   },
   {
     id: "6",
-    slug: "how-to-plan-perfect-wedding-album-complete-guide-2026",
+    slug: "how-to-Plan-Your-Perfect-Wedding-Album",
     metaTitle: "How to Plan Your Perfect Wedding Album: Complete 2026 Guide",
     metaDescription: "Learn how to plan your perfect wedding album with expert tips on photo selection, layout design, and storytelling. Make your wedding memories last forever!",
     primaryKeyword: "wedding album planning",
@@ -2092,3 +2092,4 @@ These keywords are naturally integrated throughout the 2,800+ word guide, with p
 This balanced approach ensures we capture traffic at every stage of the customer journey — from initial inspiration to final purchasing decision.`,
   },
 ];
+

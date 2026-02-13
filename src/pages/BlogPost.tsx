@@ -46,6 +46,21 @@ const BlogPost = () => {
             {line.replace('#### ', '')}
           </h4>
         );
+      } else if (line.startsWith('![')) {
+        // Handle markdown image syntax: ![alt](src)
+        const imageMatch = line.match(/!\[([^\]]*)\]\(([^)]+)\)/);
+        if (imageMatch) {
+          const [, altText, imageSrc] = imageMatch;
+          elements.push(
+            <div key={key++} className="my-8">
+              <img 
+                src={imageSrc} 
+                alt={altText} 
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+          );
+        }
       } else if (line.startsWith('[Insert image here')) {
         const altMatch = line.match(/alt text: "([^"]+)"/);
         const altText = altMatch ? altMatch[1] : 'Blog image';
@@ -192,20 +207,6 @@ const BlogPost = () => {
               <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
                 {post.excerpt}
               </p>
-
-              {/* SEO Meta Info Box */}
-              <div className="bg-accent/50 border border-border p-6 rounded mb-8">
-                <h4 className="font-body text-xs uppercase tracking-widest text-gold mb-3">SEO Metadata</h4>
-                <div className="space-y-2 font-body text-sm">
-                  <p><span className="text-foreground font-medium">Meta Title:</span> <span className="text-muted-foreground">{post.metaTitle}</span></p>
-                  <p><span className="text-foreground font-medium">Meta Description:</span> <span className="text-muted-foreground">{post.metaDescription}</span></p>
-                  <p><span className="text-foreground font-medium">URL Slug:</span> <span className="text-gold">/blog/{post.slug}</span></p>
-                  <p><span className="text-foreground font-medium">Primary Keyword:</span> <span className="text-gold font-semibold">{post.primaryKeyword}</span></p>
-                  <p><span className="text-foreground font-medium">Secondary Keywords:</span> <span className="text-muted-foreground">{post.secondaryKeywords.join(', ')}</span></p>
-                </div>
-              </div>
-
-              <div className="w-full h-px bg-border" />
             </header>
           </AnimatedSection>
 
@@ -256,165 +257,6 @@ const BlogPost = () => {
                   ))}
                 </ul>
               </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Keyword Research Section */}
-          <AnimatedSection delay={0.4}>
-            <div className="mt-16">
-              <div className="text-center mb-10">
-                <span className="section-subtitle block">Academic Research</span>
-                <h2 className="font-display text-3xl md:text-4xl font-light text-foreground">
-                  Keyword Research <span className="italic text-gold">Documentation</span>
-                </h2>
-              </div>
-
-              {/* Google Keyword Planner */}
-              <div className="mb-10">
-                <h3 className="font-display text-xl mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gold rounded-full" />
-                  Google Ads Keyword Planner
-                </h3>
-                <div className="border border-border rounded overflow-hidden mb-4">
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead>Keyword</TableHead>
-                        <TableHead>Search Volume</TableHead>
-                        <TableHead>Competition</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {post.googleKeywords.map((kw, idx) => (
-                        <TableRow key={idx}>
-                          <TableCell className="font-medium">{kw.keyword}</TableCell>
-                          <TableCell>{kw.searchVolume}</TableCell>
-                          <TableCell>
-                            <span className={`px-2 py-0.5 rounded text-xs font-body ${
-                              kw.competition === 'High' ? 'bg-destructive/10 text-destructive' :
-                              kw.competition === 'Medium' ? 'bg-gold/10 text-gold' :
-                              'bg-green-100 text-green-700'
-                            }`}>
-                              {kw.competition}
-                            </span>
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </div>
-                {/* Screenshot Placeholder */}
-                <div className="p-6 border-2 border-dashed border-gold/30 bg-accent/20 rounded text-center">
-                  <p className="font-body text-sm text-muted-foreground">
-                    📸 <strong>Screenshot – Google Keyword Planner – {post.category} Blog – February 2025</strong>
-                  </p>
-                  <p className="font-body text-xs text-muted-foreground mt-1">[Insert screenshot from Google Ads Keyword Planner here]</p>
-                </div>
-              </div>
-
-              {/* WordStream */}
-              <div className="mb-10">
-                <h3 className="font-display text-xl mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gold rounded-full" />
-                  WordStream Free Keyword Tool
-                </h3>
-                <div className="border border-border rounded overflow-hidden mb-4">
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead>Keyword</TableHead>
-                        <TableHead>Search Volume</TableHead>
-                        <TableHead>Competition</TableHead>
-                        <TableHead>Trend</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {post.wordstreamKeywords.map((kw, idx) => (
-                        <TableRow key={idx}>
-                          <TableCell className="font-medium">{kw.keyword}</TableCell>
-                          <TableCell>{kw.searchVolume}</TableCell>
-                          <TableCell>
-                            <span className={`px-2 py-0.5 rounded text-xs font-body ${
-                              kw.competition === 'High' ? 'bg-destructive/10 text-destructive' :
-                              kw.competition === 'Medium' ? 'bg-gold/10 text-gold' :
-                              'bg-green-100 text-green-700'
-                            }`}>
-                              {kw.competition}
-                            </span>
-                          </TableCell>
-                          <TableCell className="text-xs">{kw.extra}</TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </div>
-                <div className="p-6 border-2 border-dashed border-gold/30 bg-accent/20 rounded text-center">
-                  <p className="font-body text-sm text-muted-foreground">
-                    📸 <strong>Screenshot – WordStream – {post.category} Blog – February 2025</strong>
-                  </p>
-                  <p className="font-body text-xs text-muted-foreground mt-1">[Insert screenshot from WordStream Free Keyword Tool here]</p>
-                </div>
-              </div>
-
-              {/* SEMrush */}
-              <div className="mb-10">
-                <h3 className="font-display text-xl mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gold rounded-full" />
-                  SEMrush Keyword Analysis
-                </h3>
-                <div className="border border-border rounded overflow-hidden mb-4">
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead>Keyword</TableHead>
-                        <TableHead>Search Volume</TableHead>
-                        <TableHead>Keyword Difficulty</TableHead>
-                        <TableHead>Difficulty Level</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {post.semrushKeywords.map((kw, idx) => (
-                        <TableRow key={idx}>
-                          <TableCell className="font-medium">{kw.keyword}</TableCell>
-                          <TableCell>{kw.searchVolume}</TableCell>
-                          <TableCell>{kw.competition}%</TableCell>
-                          <TableCell className="text-xs">{kw.extra}</TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </div>
-                <div className="p-6 border-2 border-dashed border-gold/30 bg-accent/20 rounded text-center">
-                  <p className="font-body text-sm text-muted-foreground">
-                    📸 <strong>Screenshot – SEMrush – {post.category} Blog – February 2025</strong>
-                  </p>
-                  <p className="font-body text-xs text-muted-foreground mt-1">[Insert screenshot from SEMrush Keyword Analysis here]</p>
-                </div>
-              </div>
-
-              {/* Final Keywords & Justification */}
-              <div className="bg-charcoal text-cream p-8 rounded">
-                <h3 className="font-display text-xl text-gold-light mb-4">Final Target Keywords Selected</h3>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {post.finalKeywords.map((kw) => (
-                    <span key={kw} className="px-4 py-2 border border-gold/40 text-gold font-body text-sm rounded">
-                      {kw}
-                    </span>
-                  ))}
-                </div>
-                <h4 className="font-body text-xs uppercase tracking-widest text-cream/60 mb-2">Why These Keywords Were Chosen</h4>
-                <p className="font-body text-cream/80 text-sm leading-relaxed">{post.keywordJustification}</p>
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Published URL Placeholder */}
-          <AnimatedSection delay={0.45}>
-            <div className="mt-12 p-6 border border-border rounded">
-              <h4 className="font-body text-xs uppercase tracking-widest text-gold mb-3">Published Blog URL</h4>
-              <p className="font-body text-sm text-muted-foreground">
-                🔗 <strong>Published URL:</strong> <span className="text-gold">[Insert published blog URL here after deployment]</span>
-              </p>
             </div>
           </AnimatedSection>
 

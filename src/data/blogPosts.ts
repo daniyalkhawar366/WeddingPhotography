@@ -491,7 +491,7 @@ The strategies outlined here form a complete system:
   },
   {
     id: "2",
-    slug: "social-media-marketing-tips-photographers-2025-26",
+    slug: "social-media-marketing-tips-photographers-2025",
     metaTitle: "Social Media Marketing Tips for Photographers 2025/26 | Instagram, Pinterest, TikTok",
     metaDescription: "Master social media marketing for photographers in 2025/26. Expert tips on Instagram Reels, Pinterest SEO, TikTok strategy, and client conversion. Book more dream clients today.",
     primaryKeyword: "social media marketing for photographers",
